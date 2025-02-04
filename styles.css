@@ -234,6 +234,60 @@ profile-photo .img{
   border-color: #fed700;
 }
 
+/* -------------------------Skills Section Styling -----------------------*/
+.skills-section {
+    background: #202020;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #fed700;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.skill {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.skill::after {
+    content: attr(data-skill);
+    position: absolute;
+    bottom: -50px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+.skill::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(#007bff var(--progress), #ddd var(--progress));
+}
 
 /*---------------------------Education & Internship---------------------------*/
 
@@ -323,7 +377,7 @@ profile-photo .img{
 
 /*---------------------------Projects---------------------------*/
 .project-content{
-  padding: 220px 0;
+  padding: 200px 0;
   text-align: center;
   /* color:#fff;  */
 }
@@ -332,7 +386,6 @@ profile-photo .img{
   text-align: center;
 }
 .project-title h4{
-  text-transform: uppercase;
   font-size: 40px;
   line-height: 40px;
   color: #fed700;
@@ -377,6 +430,121 @@ profile-photo .img{
 }
 .project:hover{
   border-color: #fed700;
+}
+
+/* -----------------------Certifications Section Styling -----------------------*/
+.certifications-section {
+  background: #202020;
+  padding: 50px 20;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.certifications-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.certification-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 300px;
+}
+
+.certification-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.certification-card h3 {
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.certification-card p {
+  font-size: 14px;
+  color: #777;
+  margin-top: 5px;
+}
+
+/* --------------------Contact Me Section Styling------------------------ */
+.contact-section {
+  background:#202020 ;
+  padding: 0px 0;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #fed700;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+}
+
+.contact-info {
+  font-size: 18px;
+  color: white;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.contact-info i {
+  color: #007bff;
+}
+
+.contact-form {
+  background: #202020;
+  padding: 20px;
+  box-shadow: 0px 4px 10px #202020(0, 0, 0, 0.2);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact-form button {
+  background: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #0056b3;
 }
 
 
