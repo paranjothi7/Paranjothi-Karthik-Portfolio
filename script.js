@@ -43,51 +43,44 @@ $(document).ready(function() {
       $(this).addClass("active");
     });
 
-    // certification js
-    document.addEventListener("DOMContentLoaded", function () {
-      const certificationImages = document.querySelectorAll(".certification-card img");
+    // Image Viewer
+    const images = document.querySelectorAll(".image-to-view");
+
+    images.forEach(image => {
+        image.addEventListener("click", function () {
+            const newWindow = window.open("");
+            newWindow.document.write(`<img src="${image.src}" alt="Image">`);
+            newWindow.document.title = "Image Viewer";
+        });
+    });
+});
   
-      certificationImages.forEach(image => {
-          image.addEventListener("click", function () {
-              fetch(image.src)
-                  .then(response => response.blob())
-                  .then(blob => {
-                      const blobUrl = URL.createObjectURL(blob);
-                      const link = document.createElement("a");
-                      link.href = blobUrl;
-                      link.download = "certificate_" + Date.now() + ".jpg"; // Auto-generate filename
-                      document.body.appendChild(link);
-                      link.click();
-                      document.body.removeChild(link);
-                      URL.revokeObjectURL(blobUrl);
-                  })
-                  .catch(error => console.error("Error downloading the certificate:", error));
-          });
-      });
-  });
-  
-  
-    //Contact Me js
-    document.addEventListener("DOMContentLoaded", function () {
-      const form = document.querySelector(".contact-form form");
-      
-      form.addEventListener("submit", function (event) {
-          event.preventDefault();
+  // Contact Form Submission
+document.addEventListener("DOMContentLoaded", function() {
+  const contactForm = document.querySelector("#contactForm");
+  if (contactForm) {
+      contactForm.addEventListener("submit", function(event) {
+          event.preventDefault(); // Prevent default form submission
           
-          const name = document.querySelector("input[name='name']").value;
-          const email = document.querySelector("input[name='email']").value;
-          const message = document.querySelector("textarea[name='message']").value;
+          // Get form values
+          const name = document.querySelector("#name").value;
+          const email = document.querySelector("#email").value;
+          const message = document.querySelector("#message").value;
           
-          if (name && email && message) {
-              const mailtoLink = `mailto:paranjothikarthik2003@gmail.com?subject=Contact%20Form%20Submission&body=Name:%20${encodeURIComponent(name)}%0AEmail:%20${encodeURIComponent(email)}%0AMessage:%20${encodeURIComponent(message)}`;
-              window.location.href = mailtoLink;
-              form.reset();
-          } else {
-              alert("Please fill in all fields before submitting.");
+          // Validate form values
+          if (name === "" || email === "" || message === "") {
+              alert("Please fill in all fields.");
+              return;
           }
+          
+          // Simulate form submission
+          alert(`Thank you, ${name}! Your message has been sent.`);
+          
+          // Clear form fields
+          contactForm.reset();
       });
-  });
-  
+  }
+});
 
     //Initial content revealing js
     ScrollReveal({
@@ -108,8 +101,6 @@ $(document).ready(function() {
     ScrollReveal().reveal(".projects, .contact", {
       origin: "bottom"
     });
-    
-  });
                                 
   function updateActiveSection() {
     var scrollPosition = $(window).scrollTop();
