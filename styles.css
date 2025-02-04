@@ -324,6 +324,7 @@ profile-photo .img{
 /*---------------------------Projects---------------------------*/
 .project-content{
   padding: 220px 0;
+  text-align: center;
   /* color:#fff;  */
 }
 .project-title{
