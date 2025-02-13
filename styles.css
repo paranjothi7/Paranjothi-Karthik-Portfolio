@@ -234,59 +234,71 @@ profile-photo .img{
   border-color: #fed700;
 }
 
-/* -------------------------Skills Section Styling -----------------------*/
+/* ------------------------- Skills Section Styling ----------------------- */
 .skills-section {
-    background: #202020;
-    padding: 50px 0;
-    text-align: center;
+  background: #202020;
+  padding: 50px 5%;
+  text-align: center;
 }
 
 .section-title {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color: #fed700;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #fed700;
 }
 
 .skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
 }
 
 .skill {
-    position: relative;
-    width: 120px;
-    height: 120px;
-    background: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    font-size: 16px;
-    font-weight: bold;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .skill::after {
-    content: attr(data-skill);
-    position: absolute;
-    bottom: -50px;
-    width: 100%;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    color: white;
+  content: attr(data-skill);
+  position: absolute;
+  bottom: -35px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
 }
 
 .skill::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: conic-gradient(#007bff var(--progress), #ddd var(--progress));
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(#007bff var(--progress), #ddd var(--progress));
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .skill {
+      width: 120px;
+      height: 120px;
+      font-size: 16px;
+  }
+  .skill::after {
+      bottom: -50px;
+  }
 }
 
 /*---------------------------Education & Internship---------------------------*/
