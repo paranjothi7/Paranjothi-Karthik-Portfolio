@@ -389,7 +389,7 @@ profile-photo .img{
 
 /*---------------------------Projects---------------------------*/
 .project-content{
-  padding: 0 0 50px 0; /* No top padding, 50px bottom padding */
+  padding: 250px 0;
   text-align: center;
   /* color:#fff;  */
 }
