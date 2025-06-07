@@ -388,10 +388,9 @@ profile-photo .img{
 
 
 /*---------------------------Projects---------------------------*/
-.project-content {
-  clear: both; /* Clear any floated elements above */
-  padding: 80px 0 50px 0;
+.project-content{
   text-align: center;
+  /* color:#fff;  */
 }
 .project-title{
   margin-bottom: 60px;
