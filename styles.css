@@ -390,10 +390,12 @@ profile-photo .img{
 /*---------------------------Projects---------------------------*/
 .project-content{
   text-align: center;
+  padding-top: 80px; /* Add top padding to create space from previous section */
+  margin-top: 60px;   /* Add top margin for additional spacing */
   /* color:#fff;  */
 }
 .project-title{
-  margin-bottom: 60px;
+  margin-bottom: 60px; /* Reduced from 120px to balance the spacing */
   text-align: center;
 }
 .project-title h4{
@@ -409,6 +411,7 @@ profile-photo .img{
   display: flex;
   justify-content:space-between;
   flex-wrap: wrap;
+  gap: 20px; /* Add gap between project cards */
 }
 .project{
     /* padding: 30px 15px; */
@@ -421,6 +424,7 @@ profile-photo .img{
     text-align: center;
     flex-basis: 32%;
     transition: .3s;
+    margin-bottom: 20px; /* Add bottom margin to project cards */
 }
 .project i{
   background-color: #fed700;
@@ -443,11 +447,11 @@ profile-photo .img{
   border-color: #fed700;
 }
 
-/* -----------------------Certifications Section Styling -----------------------*/
 .certifications-section {
   background: #202020;
-  padding: 50px 20;
+  padding: 80px 20px 50px; /* Increased top padding */
   text-align: center;
+  margin-top: 60px; /* Add margin-top for additional spacing */
 }
 
 .section-title {
@@ -492,8 +496,9 @@ profile-photo .img{
 /* --------------------Contact Me Section Styling------------------------ */
 .contact-section {
   background:#202020 ;
-  padding: 0px 0;
+  padding: 80px 0 50px; /* Increased top padding */
   text-align: center;
+  margin-top: 60px; /* Add margin-top for additional spacing */
 }
 
 .section-title {
@@ -548,7 +553,6 @@ button:hover {
   background-color: #0056b3;
 }
 
-
 /*---------------------------Footer---------------------------*/
 .footer {
     max-width: 950px;
@@ -570,9 +574,6 @@ button:hover {
   .copyright {
     font-size: 12px;
   }
-
-
-
 
  /*------------------- Responsive Design on small screen -------------------*/
 
