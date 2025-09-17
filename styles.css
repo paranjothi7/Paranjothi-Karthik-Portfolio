@@ -390,7 +390,7 @@ profile-photo .img{
 /*---------------------------Projects---------------------------*/
 .project-content{
   text-align: center;
-  padding-top: 80px; /* Add top padding to create space from previous section */
+  padding-top: 120px; /* Add top padding to create space from previous section */
   margin-top: 60px;   /* Add top margin for additional spacing */
   /* color:#fff;  */
 }
